@@ -121,7 +121,7 @@ function openCustomerModal() {
     alert('Kundenformular wird in einer zukünftigen Version implementiert.');
 }
 
-// Form Submission
+// Initialize all event listeners on DOM load
 document.addEventListener('DOMContentLoaded', function() {
     // Add event listeners to invoice form items
     const itemInputs = document.querySelectorAll('.item-quantity, .item-price');
@@ -240,10 +240,8 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`${action} für ${customerName}`);
         });
     });
-});
-
-// Search functionality
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Search functionality
     const searchInput = document.querySelector('.search-box input');
     if (searchInput) {
         searchInput.addEventListener('input', function(e) {
