@@ -2,6 +2,21 @@
 
 Eine moderne, professionelle Rechnungsverwaltungssoftware inspiriert von SevDesk und anderen führenden Rechnungsprogrammen.
 
+## 🌐 Live Demo
+
+**[➡️ Jetzt ausprobieren!](https://micagnn.github.io/Rechnungwebsite/)**
+
+Die Website ist über GitHub Pages verfügbar und kann direkt im Browser getestet werden.
+
+## 🚀 Schnellstart
+
+Die einfachste Art, die Anwendung zu testen:
+
+1. **Online**: Besuchen Sie [https://micagnn.github.io/Rechnungwebsite/](https://micagnn.github.io/Rechnungwebsite/)
+2. **Lokal**: Laden Sie die Dateien herunter und öffnen Sie `index.html` in Ihrem Browser
+
+Das war's! Keine Installation, keine Konfiguration erforderlich.
+
 ## Features
 
 ### 📊 Dashboard
@@ -46,13 +61,43 @@ Das Design wurde mit Fokus auf Benutzerfreundlichkeit und professionelles Ersche
 
 ## Installation
 
-1. Klonen Sie das Repository
-2. Öffnen Sie `index.html` in einem modernen Webbrowser
-3. Alternativ: Starten Sie einen lokalen Webserver:
+### Option 1: Online Demo (Empfohlen)
+Besuchen Sie einfach die [Live Demo](https://micagnn.github.io/Rechnungwebsite/) - keine Installation erforderlich!
+
+### Option 2: Lokal ausführen
+
+1. **Klonen Sie das Repository**
+   ```bash
+   git clone https://github.com/micagnn/Rechnungwebsite.git
+   cd Rechnungwebsite
+   ```
+
+2. **Im Browser öffnen**
+   
+   **Methode A: Direkt öffnen (einfachste Methode)**
+   - Doppelklicken Sie einfach auf `index.html`
+   - Die Website öffnet sich in Ihrem Standard-Browser
+   
+   **Methode B: Mit lokalem Webserver (empfohlen für volle Funktionalität)**
+   
+   Mit Python:
    ```bash
    python3 -m http.server 8000
    ```
+   
+   Mit Node.js:
+   ```bash
+   npx serve
+   ```
+   
+   Mit PHP:
+   ```bash
+   php -S localhost:8000
+   ```
+   
    Dann öffnen Sie `http://localhost:8000` im Browser
+
+3. **Fertig!** Die Anwendung läuft nun lokal auf Ihrem Computer.
 
 ## Technologie-Stack
 
