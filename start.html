@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RechnungPro - Anleitung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #2C3E50;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #6C757D;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #4A90E2 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: #F8F9FA;
+            color: #2C3E50;
+            border: 2px solid #DEE2E6;
+        }
+        
+        .btn-secondary:hover {
+            background: #E9ECEF;
+            transform: translateY(-2px);
+        }
+        
+        .info-box {
+            background: #F8F9FA;
+            border-left: 4px solid #4A90E2;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 30px;
+        }
+        
+        .info-box h3 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-box li {
+            color: #6C757D;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .info-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28A745;
+            font-weight: bold;
+        }
+        
+        .demo-link {
+            background: #FFF3CD;
+            border: 2px solid #FFC107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .demo-link strong {
+            color: #856404;
+            font-size: 16px;
+        }
+        
+        .demo-link code {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #4A90E2;
+            font-family: monospace;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">📊</div>
+        <h1>Willkommen bei RechnungPro!</h1>
+        <p>
+            Vielen Dank für Ihr Interesse an unserer Rechnungsverwaltungssoftware. 
+            Sie haben mehrere Möglichkeiten, die Anwendung zu testen und zu nutzen.
+        </p>
+        
+        <div class="button-group">
+            <a href="index.html" class="btn btn-primary">🚀 Anwendung starten</a>
+            <a href="https://github.com/micagnn/Rechnungwebsite/archive/refs/heads/main.zip" class="btn btn-primary" download>⬇️ Als ZIP herunterladen</a>
+            <a href="https://github.com/micagnn/Rechnungwebsite" target="_blank" class="btn btn-secondary">📖 GitHub Repository</a>
+        </div>
+        
+        <div class="demo-link">
+            <strong>💡 Online-Demo verfügbar!</strong><br>
+            Besuchen Sie die Live-Version ohne Installation:<br>
+            <code>https://micagnn.github.io/Rechnungwebsite/</code>
+        </div>
+        
+        <div class="info-box" style="background: #E7F3FF; border-left-color: #4A90E2;">
+            <h3>📥 Download Optionen</h3>
+            <ul>
+                <li><strong>ZIP-Download:</strong> Alle Dateien auf einmal herunterladen</li>
+                <li><strong>Git Clone:</strong> Mit <code>git clone https://github.com/micagnn/Rechnungwebsite.git</code></li>
+                <li><strong>Einzelne Dateien:</strong> Direkt vom GitHub Repository</li>
+                <li>Nach dem Download einfach <code>index.html</code> öffnen</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>✨ Hauptfunktionen</h3>
+            <ul>
+                <li>Übersichtliches Dashboard mit Statistiken</li>
+                <li>Rechnungen erstellen, bearbeiten und verwalten</li>
+                <li>Kundenverwaltung mit allen wichtigen Daten</li>
+                <li>Automatische Berechnung von MwSt. und Gesamtbeträgen</li>
+                <li>Moderne, benutzerfreundliche Oberfläche</li>
+                <li>Responsive Design für alle Geräte</li>
+            </ul>
+        </div>
+        
+        <div class="info-box">
+            <h3>💻 Lokale Nutzung</h3>
+            <ul>
+                <li>Keine Installation erforderlich</li>
+                <li>Funktioniert offline nach dem ersten Laden</li>
+                <li>Alle Daten bleiben lokal im Browser</li>
+                <li>Unterstützt alle modernen Browser</li>
+            </ul>
+        </div>
+        
+        <p style="margin-top: 40px; font-size: 14px; color: #999;">
+            Erstellt mit ❤️ für professionelle Rechnungsverwaltung
+        </p>
+    </div>
+</body>
+</html>
