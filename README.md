@@ -2,18 +2,35 @@
 
 Eine moderne, professionelle Rechnungsverwaltungssoftware inspiriert von SevDesk und anderen führenden Rechnungsprogrammen.
 
-## 🌐 Live Demo
+## 📥 Download / Herunterladen
 
-**[➡️ Jetzt ausprobieren!](https://micagnn.github.io/Rechnungwebsite/)**
+### Direkt herunterladen (ohne Git):
+**[⬇️ Als ZIP-Datei herunterladen](https://github.com/micagnn/Rechnungwebsite/archive/refs/heads/main.zip)**
 
-Die Website ist über GitHub Pages verfügbar und kann direkt im Browser getestet werden.
+Nach dem Download:
+1. ZIP-Datei entpacken
+2. `index.html` im Browser öffnen
+3. Fertig! 🎉
+
+### Mit Git klonen:
+```bash
+git clone https://github.com/micagnn/Rechnungwebsite.git
+cd Rechnungwebsite
+```
+
+### Direktlinks:
+- 🌐 **[Online Demo](https://micagnn.github.io/Rechnungwebsite/)** - Sofort testen ohne Download
+- 📦 **[ZIP Download](https://github.com/micagnn/Rechnungwebsite/archive/refs/heads/main.zip)** - Alle Dateien auf einmal
+- 💻 **[GitHub Repository](https://github.com/micagnn/Rechnungwebsite)** - Quellcode ansehen
+
+---
 
 ## 🚀 Schnellstart
 
-Die einfachste Art, die Anwendung zu testen:
+Die einfachste Art, die Anwendung zu nutzen:
 
 1. **Online**: Besuchen Sie [https://micagnn.github.io/Rechnungwebsite/](https://micagnn.github.io/Rechnungwebsite/)
-2. **Lokal**: Laden Sie die Dateien herunter und öffnen Sie `index.html` in Ihrem Browser
+2. **Download**: [ZIP-Datei herunterladen](https://github.com/micagnn/Rechnungwebsite/archive/refs/heads/main.zip) und `index.html` öffnen
 
 Das war's! Keine Installation, keine Konfiguration erforderlich.
 
