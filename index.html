@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechnungsverwaltung - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo">
+            <i class="fas fa-file-invoice"></i>
+            <h2>RechnungPro</h2>
+        </div>
+        <nav class="nav-menu">
+            <a href="#dashboard" class="nav-item active" onclick="showSection('dashboard')">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#invoices" class="nav-item" onclick="showSection('invoices')">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Rechnungen</span>
+            </a>
+            <a href="#customers" class="nav-item" onclick="showSection('customers')">
+                <i class="fas fa-users"></i>
+                <span>Kunden</span>
+            </a>
+            <a href="#new-invoice" class="nav-item" onclick="showSection('new-invoice')">
+                <i class="fas fa-plus-circle"></i>
+                <span>Neue Rechnung</span>
+            </a>
+            <a href="#settings" class="nav-item" onclick="showSection('settings')">
+                <i class="fas fa-cog"></i>
+                <span>Einstellungen</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1 id="page-title">Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Suchen...">
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Max Mustermann</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="content-section active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Offene Rechnungen</h3>
+                        <p class="stat-number">12</p>
+                        <span class="stat-label">Gesamt: 15.420,00 €</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Bezahlte Rechnungen</h3>
+                        <p class="stat-number">48</p>
+                        <span class="stat-label">Diesen Monat</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Überfällig</h3>
+                        <p class="stat-number">3</p>
+                        <span class="stat-label">Gesamt: 2.150,00 €</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Umsatz</h3>
+                        <p class="stat-number">42.890,00 €</p>
+                        <span class="stat-label">Diesen Monat</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-section">
+                <h2>Letzte Rechnungen</h2>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Rechnungsnummer</th>
+                                <th>Kunde</th>
+                                <th>Datum</th>
+                                <th>Betrag</th>
+                                <th>Status</th>
+                                <th>Aktionen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#RE-2024-001</td>
+                                <td>Firma ABC GmbH</td>
+                                <td>15.01.2024</td>
+                                <td>1.250,00 €</td>
+                                <td><span class="badge badge-paid">Bezahlt</span></td>
+                                <td>
+                                    <button class="btn-icon" title="Ansehen"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Bearbeiten"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="Download"><i class="fas fa-download"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#RE-2024-002</td>
+                                <td>Müller GmbH</td>
+                                <td>18.01.2024</td>
+                                <td>3.450,00 €</td>
+                                <td><span class="badge badge-pending">Offen</span></td>
+                                <td>
+                                    <button class="btn-icon" title="Ansehen"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Bearbeiten"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="Download"><i class="fas fa-download"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#RE-2024-003</td>
+                                <td>Schmidt & Co. KG</td>
+                                <td>20.01.2024</td>
+                                <td>890,00 €</td>
+                                <td><span class="badge badge-overdue">Überfällig</span></td>
+                                <td>
+                                    <button class="btn-icon" title="Ansehen"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-icon" title="Bearbeiten"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-icon" title="Download"><i class="fas fa-download"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invoices Section -->
+        <section id="invoices" class="content-section">
+            <div class="section-header">
+                <div class="filter-buttons">
+                    <button class="filter-btn active">Alle</button>
+                    <button class="filter-btn">Offen</button>
+                    <button class="filter-btn">Bezahlt</button>
+                    <button class="filter-btn">Überfällig</button>
+                </div>
+                <button class="btn btn-primary" onclick="showSection('new-invoice')">
+                    <i class="fas fa-plus"></i> Neue Rechnung
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Rechnungsnummer</th>
+                            <th>Kunde</th>
+                            <th>Datum</th>
+                            <th>Fälligkeit</th>
+                            <th>Betrag</th>
+                            <th>Status</th>
+                            <th>Aktionen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#RE-2024-001</td>
+                            <td>Firma ABC GmbH</td>
+                            <td>15.01.2024</td>
+                            <td>15.02.2024</td>
+                            <td>1.250,00 €</td>
+                            <td><span class="badge badge-paid">Bezahlt</span></td>
+                            <td>
+                                <button class="btn-icon" title="Ansehen"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon" title="Bearbeiten"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon" title="Download"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#RE-2024-002</td>
+                            <td>Müller GmbH</td>
+                            <td>18.01.2024</td>
+                            <td>18.02.2024</td>
+                            <td>3.450,00 €</td>
+                            <td><span class="badge badge-pending">Offen</span></td>
+                            <td>
+                                <button class="btn-icon" title="Ansehen"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon" title="Bearbeiten"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon" title="Download"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#RE-2024-003</td>
+                            <td>Schmidt & Co. KG</td>
+                            <td>20.01.2024</td>
+                            <td>20.02.2024</td>
+                            <td>890,00 €</td>
+                            <td><span class="badge badge-overdue">Überfällig</span></td>
+                            <td>
+                                <button class="btn-icon" title="Ansehen"><i class="fas fa-eye"></i></button>
+                                <button class="btn-icon" title="Bearbeiten"><i class="fas fa-edit"></i></button>
+                                <button class="btn-icon" title="Download"><i class="fas fa-download"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Customers Section -->
+        <section id="customers" class="content-section">
+            <div class="section-header">
+                <h2>Kundenverwaltung</h2>
+                <button class="btn btn-primary" onclick="openCustomerModal()">
+                    <i class="fas fa-plus"></i> Neuer Kunde
+                </button>
+            </div>
+
+            <div class="customers-grid">
+                <div class="customer-card">
+                    <div class="customer-icon">AB</div>
+                    <h3>Firma ABC GmbH</h3>
+                    <p>contact@abc-firma.de</p>
+                    <p>+49 123 456789</p>
+                    <div class="customer-stats">
+                        <span>8 Rechnungen</span>
+                        <span>12.450,00 €</span>
+                    </div>
+                    <div class="customer-actions">
+                        <button class="btn btn-small">Details</button>
+                        <button class="btn btn-small btn-secondary">Bearbeiten</button>
+                    </div>
+                </div>
+                <div class="customer-card">
+                    <div class="customer-icon">MG</div>
+                    <h3>Müller GmbH</h3>
+                    <p>info@mueller.de</p>
+                    <p>+49 987 654321</p>
+                    <div class="customer-stats">
+                        <span>15 Rechnungen</span>
+                        <span>28.900,00 €</span>
+                    </div>
+                    <div class="customer-actions">
+                        <button class="btn btn-small">Details</button>
+                        <button class="btn btn-small btn-secondary">Bearbeiten</button>
+                    </div>
+                </div>
+                <div class="customer-card">
+                    <div class="customer-icon">SC</div>
+                    <h3>Schmidt & Co. KG</h3>
+                    <p>kontakt@schmidt-co.de</p>
+                    <p>+49 555 123456</p>
+                    <div class="customer-stats">
+                        <span>5 Rechnungen</span>
+                        <span>5.600,00 €</span>
+                    </div>
+                    <div class="customer-actions">
+                        <button class="btn btn-small">Details</button>
+                        <button class="btn btn-small btn-secondary">Bearbeiten</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Invoice Section -->
+        <section id="new-invoice" class="content-section">
+            <div class="invoice-form-container">
+                <h2>Neue Rechnung erstellen</h2>
+                
+                <form class="invoice-form">
+                    <div class="form-section">
+                        <h3>Kundeninformationen</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer">Kunde auswählen *</label>
+                                <select id="customer" required>
+                                    <option value="">Bitte wählen...</option>
+                                    <option value="1">Firma ABC GmbH</option>
+                                    <option value="2">Müller GmbH</option>
+                                    <option value="3">Schmidt & Co. KG</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="invoice-date">Rechnungsdatum *</label>
+                                <input type="date" id="invoice-date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="invoice-number">Rechnungsnummer *</label>
+                                <input type="text" id="invoice-number" value="RE-2024-004" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="due-date">Fälligkeitsdatum *</label>
+                                <input type="date" id="due-date" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Positionen</h3>
+                        <div class="items-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 40%;">Beschreibung</th>
+                                        <th style="width: 15%;">Menge</th>
+                                        <th style="width: 20%;">Einzelpreis</th>
+                                        <th style="width: 20%;">Gesamt</th>
+                                        <th style="width: 5%;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="invoice-items">
+                                    <tr>
+                                        <td><input type="text" placeholder="Leistungsbeschreibung" class="item-description"></td>
+                                        <td><input type="number" value="1" min="1" class="item-quantity"></td>
+                                        <td><input type="number" step="0.01" placeholder="0.00" class="item-price"></td>
+                                        <td class="item-total">0,00 €</td>
+                                        <td><button type="button" class="btn-remove" onclick="removeItem(this)"><i class="fas fa-trash"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-secondary" onclick="addItem()">
+                                <i class="fas fa-plus"></i> Position hinzufügen
+                            </button>
+                        </div>
+
+                        <div class="invoice-summary">
+                            <div class="summary-row">
+                                <span>Zwischensumme:</span>
+                                <span id="subtotal">0,00 €</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>MwSt. (19%):</span>
+                                <span id="tax">0,00 €</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Gesamtbetrag:</span>
+                                <span id="total">0,00 €</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Zusätzliche Informationen</h3>
+                        <div class="form-group">
+                            <label for="notes">Notizen / Zahlungsbedingungen</label>
+                            <textarea id="notes" rows="4" placeholder="Zahlbar innerhalb von 14 Tagen ohne Abzug..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="showSection('dashboard')">Abbrechen</button>
+                        <button type="button" class="btn btn-outline">Vorschau</button>
+                        <button type="submit" class="btn btn-primary">Rechnung erstellen</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="content-section">
+            <div class="settings-container">
+                <h2>Einstellungen</h2>
+                
+                <div class="settings-section">
+                    <h3>Firmeninformationen</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company-name">Firmenname</label>
+                            <input type="text" id="company-name" placeholder="Ihre Firma GmbH">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-tax">Steuernummer</label>
+                            <input type="text" id="company-tax" placeholder="DE123456789">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company-address">Adresse</label>
+                            <input type="text" id="company-address" placeholder="Musterstraße 123">
+                        </div>
+                        <div class="form-group">
+                            <label for="company-city">Stadt</label>
+                            <input type="text" id="company-city" placeholder="12345 Musterstadt">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Rechnungseinstellungen</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="invoice-prefix">Rechnungsnummer Präfix</label>
+                            <input type="text" id="invoice-prefix" value="RE-2024-">
+                        </div>
+                        <div class="form-group">
+                            <label for="default-tax">Standard MwSt. (%)</label>
+                            <input type="number" id="default-tax" value="19" min="0" max="100">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="payment-terms">Standard Zahlungsziel (Tage)</label>
+                            <input type="number" id="payment-terms" value="14" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="currency">Währung</label>
+                            <select id="currency">
+                                <option value="EUR">EUR (€)</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="CHF">CHF (Fr.)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary">Einstellungen speichern</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
